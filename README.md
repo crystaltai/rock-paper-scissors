@@ -1,6 +1,6 @@
-# rock-paper-scissors
-Rock paper scissors game
+# Rock Paper Scissors Project
 
+## Project Reflections
 11/21/21
 - Initial version of this game was built in the console only, using an HTML file with JS script 
 - The game repeats itself until either player reaches 5 points first
