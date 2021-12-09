@@ -1,0 +1,137 @@
+body {
+    background-color: #F0F2F3;
+    font-family: 'Readex Pro', 'Times New Roman', Times, serif;
+    color: #424242;
+}
+
+/* SECTION 1: Header title and subtitle rules */
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title h1, .title h2 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+h1 {
+    font-size: 38px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+/* SECTION 2: Winner annoucement, scoreboard and opponents' selections */
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.results-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 0 1 400px;
+}
+
+.results {
+    margin: 0px auto;
+    align-content: center;
+}
+
+.score-cards {
+    display: flex;
+    flex: 0 1 230px;
+    justify-content: space-between;
+}
+
+.score-card {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 180px;
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+}
+
+.opponent {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 30px;
+}
+
+#user-icon {
+    font-size: 16px;
+}
+
+.selection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+i {
+    font-size: 100px;
+}
+
+/* SECTION 3: Player button selection */
+.player-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.options {
+    display: flex;
+    gap: 40px;
+}
+
+button {
+    padding: 10px;
+    border-style: solid;
+    border-color: #57606f;
+    border-radius: 15px;
+    color: #a4b0be;
+    width: 95px;
+    align-content: center;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+.option-button {
+    font-size: 70px;
+}
+
+button:hover {
+    background-color: #57606f;
+    color: #F0F2F3;
+}
+
+/* SECTION 4: Popup for game restart button */
+.popup-container {
+    display: none; /* Makes popup hidden by default */
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-inner {
+    background-color: #a4b0be;
+    border-style: solid;
+    border-color: #57606f;
+    border-radius: 15px;
+    width: 300px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

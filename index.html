@@ -5,99 +5,76 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- To utilize Font Awesome icons -->
+    <script src="https://kit.fontawesome.com/f99d80629d.js" crossorigin="anonymous"></script>
+    <!-- To utilize Readex Pro font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <script>
-     
-        // Set global variables to keep track of player and computer points
-        let playerPoints = 0;
-        let computerPoints = 0;
-        
-        
-        // Select random play for computer
-        function computerPlay() {
-            let computerOptions = ['rock', 'paper', 'scissors'];
-            let computerChoice = computerOptions[Math.floor(Math.random() * computerOptions.length)];
-            return computerChoice;        
-        }
-        
-        // Single round of game
-        function gameRound(playerSelection, computerSelection) {
-            // turn playerSelection to lowercase despite what case their input is
-            playerSelection = playerSelection.toLowerCase();
-            
-            // return 1 if player wins round; return 0 if computer wins round; return null if tie
-            if (playerSelection === 'rock' && computerSelection === 'scissors') {
-                console.log("Player wins! Rock beats Scissors");
-                return 1;
-            } else if (playerSelection === 'rock' && computerSelection === 'paper') {
-                console.log("Computer wins! Rock loses to Paper");
-                return 0;
-            } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
-                console.log("Computer wins! Scissors loses to Rock");
-                return 0;
-            } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
-                console.log("Player wins! Scissors beats Paper");
-                return 1;
-            } else if (playerSelection === 'paper' && computerSelection === 'rock') {
-                console.log("Player wins! Paper beats Rock");
-                return 1;
-            } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
-                console.log("Computer wins! Paper loses to Scissors");
-                return 0;
-            } else {
-                console.log("Tie! Try again!");
-                return null;
-            }
-        }
-        
-        // Game points tracker
-        function game() {
-
-            // While neither players have 5 points yet, run gameRound()
-            while (playerPoints < 5 && computerPoints < 5) {
-                
-                // Prompt user to input choice; random selection of computer choice
-                let playerMove = prompt("Rock, Paper or Scissors?");
-                let computerMove = computerPlay();
-
-                console.log("Player played: " + playerMove);
-                console.log("Computer played: " + computerMove);
-                
-                // run a round and assign the winner return value to 'winner' variable
-                let winner = gameRound(playerMove, computerMove);
-
-                // if gameRound returns 1, then add a point to player; otherwise add a point to computer
-                if (winner === 1) {
-                    playerPoints = playerPoints + 1;
-                } else if (winner === 0) {
-                    computerPoints = computerPoints + 1;
-                } else {
-                    // do nothing
-                }
-                
-                // print out score and breakline
-                console.log("Player score: " + playerPoints);
-                console.log("Computer score: " + computerPoints);
-                console.log("-----");
-            }
-
-            // If player has more points, print that player wins; vice versa
-            if (playerPoints > computerPoints) {
-                console.log("Player wins!");
-            } else {
-                console.log("Computer wins!")
-            }    
-            
-
-        }
-        
-        
-        // Initiate game
-        game();
+    <!-- SECTION 1: Header title and subtitle rules -->
+    <div class="title">
+        <h1>Rock Paper Scissors</h1>
+        <h2>First to 5 points wins</h2>
+    </div>
     
+    <!-- SECTION 2: Winner annoucement, scoreboard and opponents' selections -->
+    <div class="container">
+        <div class="results-container">
+            <div class="results"><h2 id="winner-announcer">Score</h2></div>
+            <!-- Both Player and Computer boxes -->
+            <div class="score-cards">
+                <!-- Player box -->
+                <div class="score-card">
+                    <div class="score">
+                        <div class="opponent">
+                            <div class="opponent-name">
+                                <h3><i id="user-icon" class="fas fa-smile"></i> Player:</h3>
+                            </div>
+                            <div id="player-score" class="opponent-score"><h3>0</h3></div>
+                        </div>
+                    </div>
+                    <div class="selection" id="player-selection"></div>
+                </div>
+                <!-- Computer box -->
+                <div class="score-card">
+                    <div class="score">
+                        <div class="opponent">
+                            <div class="opponent-name">
+                                <h3><i id="user-icon" class="fas fa-robot"></i> Computer:</h3>
+                            </div>
+                            <div id="computer-score" class="opponent-score"><h3>0</h3></div>
+                        </div>
+                    </div>
+                    <div class="selection" id="computer-selection"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- SECTION 3: Player button selection -->
+    <div class="player-options">
+        <div class="player-options-header">
+            <h3>Choose your option:</h3>
+        </div>
+        <div class="options">
+            <button><i id="rock" class="fas fa-hand-rock option-button"></i></button>
+            <button><i id="paper" class="fas fa-hand-paper option-button"></i></button>
+            <button><i id="scissors" class="fas fa-hand-peace option-button"></i></button>
+        </div>
+    </div>
 
-
-    </script>
+    <!-- SECTION 4: Popup for game restart button -->
+    <div class="popup-container">
+        <div class="popup-inner">
+            <h3>Try again?</h3>
+            <button class="restart">Restart</button>
+        </div>
+    </div>
+    
+    <!-- Javascript script -->
+    <script src="script.js"></script>
 </body>
 </html>
