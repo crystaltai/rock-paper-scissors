@@ -14,5 +14,5 @@
   - Allow Player to restart game once it finishes (reseting page to default state)
 
 
-  ## Live Preview
-  https://crystaltai.github.io/rock-paper-scissors/
+## Live Preview
+https://crystaltai.github.io/rock-paper-scissors/
