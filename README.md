@@ -12,3 +12,7 @@
   - Player buttons to choose: rock, paper or scissors
   - Score display and winner announcement
   - Allow Player to restart game once it finishes (reseting page to default state)
+
+
+  ## Live Preview
+  https://crystaltai.github.io/rock-paper-scissors/
