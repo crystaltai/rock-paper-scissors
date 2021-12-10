@@ -1,7 +1,7 @@
 # Rock Paper Scissors game
 Project to create a Rock Paper Scissors game using only HTML, CSS and Vanilla JS
 
-**Live preview:** https://crystaltai.github.io/rock-paper-scissors/
+**🔗 Live preview:** https://crystaltai.github.io/rock-paper-scissors/
 ## Built with
 ### Technologies
 - HTML
