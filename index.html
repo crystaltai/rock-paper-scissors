@@ -1,85 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissors</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <!-- To utilize Font Awesome icons -->
     <script src="https://kit.fontawesome.com/f99d80629d.js" crossorigin="anonymous"></script>
     <!-- To utilize Readex Pro font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@500&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!-- SECTION 1: Header title and subtitle rules -->
     <div class="title">
-        <h1>Rock Paper Scissors</h1>
-        <h2>First to 5 points wins</h2>
+      <h1>Rock Paper Scissors</h1>
+      <h2>First to 5 points wins</h2>
     </div>
-    
+
     <!-- SECTION 2: Winner annoucement, scoreboard and opponents' selections -->
     <div class="container">
-        <div class="results-container">
-            <div class="results"><h2 id="winner-announcer">Score</h2></div>
-            <!-- Both Player and Computer boxes -->
-            <div class="score-cards">
-                <!-- Player box -->
-                <div class="score-card">
-                    <div class="score">
-                        <div class="opponent">
-                            <div class="opponent-name">
-                                <h3><i id="user-icon" class="fas fa-smile"></i> Player:</h3>
-                            </div>
-                            <div id="player-score" class="opponent-score"><h3>0</h3></div>
-                        </div>
-                    </div>
-                    <div class="selection" id="player-selection"></div>
+      <div class="results-container">
+        <div class="results"><h2 id="winner-announcer">Score</h2></div>
+        <!-- Both Player and Computer boxes -->
+        <div class="score-cards">
+          <!-- Player box -->
+          <div class="score-card">
+            <div class="score">
+              <div class="opponent">
+                <div class="opponent-name">
+                  <h3><i id="user-icon" class="fas fa-smile"></i> Player:</h3>
                 </div>
-                <!-- Computer box -->
-                <div class="score-card">
-                    <div class="score">
-                        <div class="opponent">
-                            <div class="opponent-name">
-                                <h3><i id="user-icon" class="fas fa-robot"></i> Computer:</h3>
-                            </div>
-                            <div id="computer-score" class="opponent-score"><h3>0</h3></div>
-                        </div>
-                    </div>
-                    <div class="selection" id="computer-selection"></div>
-                </div>
+                <div id="player-score" class="opponent-score"><h3>0</h3></div>
+              </div>
             </div>
+            <div class="selection" id="player-selection"></div>
+          </div>
+          <!-- Computer box -->
+          <div class="score-card">
+            <div class="score">
+              <div class="opponent">
+                <div class="opponent-name">
+                  <h3><i id="user-icon" class="fas fa-robot"></i> Computer:</h3>
+                </div>
+                <div id="computer-score" class="opponent-score"><h3>0</h3></div>
+              </div>
+            </div>
+            <div class="selection" id="computer-selection"></div>
+          </div>
         </div>
+      </div>
     </div>
-    
+
     <!-- SECTION 3: Player button selection -->
     <div class="player-options">
-        <div class="player-options-header">
-            <h3>Choose your option:</h3>
-        </div>
-        <div class="options">
-            <button><i id="rock" class="fas fa-hand-rock option-button"></i></button>
-            <button><i id="paper" class="fas fa-hand-paper option-button"></i></button>
-            <button><i id="scissors" class="fas fa-hand-peace option-button"></i></button>
-        </div>
+      <div class="player-options-header">
+        <h3>Choose your option:</h3>
+      </div>
+      <div class="options">
+        <button><i id="rock" class="fas fa-hand-rock option-button"></i></button>
+        <button><i id="paper" class="fas fa-hand-paper option-button"></i></button>
+        <button><i id="scissors" class="fas fa-hand-peace option-button"></i></button>
+      </div>
     </div>
 
     <!-- SECTION 4: Popup for game restart button -->
     <div class="popup-container">
-        <div class="popup-inner">
-            <h3>Try again?</h3>
-            <button class="restart">Restart</button>
-        </div>
+      <div class="popup-inner">
+        <h3>Try again?</h3>
+        <button class="restart">Restart</button>
+      </div>
     </div>
-    
+
     <!-- Footer -->
     <div class="footer">
-        <h3>Made by Crystal Tai  <a href="https://github.com/crystaltai/rock-paper-scissors/tree/main"><i id="github" class="fab fa-github"></i></a></h3>
+      <h3>
+        Made by Crystal Tai
+        <a href="https://github.com/crystaltai/rock-paper-scissors/tree/main"
+          ><i id="github" class="fab fa-github"></i
+        ></a>
+      </h3>
     </div>
 
     <!-- Javascript script -->
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
